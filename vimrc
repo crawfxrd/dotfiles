@@ -1,4 +1,15 @@
 set nocompatible
+
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+
+call vundle#end()
+filetype plugin indent on
+
 set viminfo+=n~/.vim/viminfo
 set title
 set hidden
@@ -12,6 +23,7 @@ set history=50
 set backspace=indent,eol,start
 set whichwrap+=<,>,h,l,[,]
 set nowrap
+set cursorline
 set colorcolumn=80
 set scrolloff=3
 set backup
@@ -27,6 +39,7 @@ set list
 set listchars=tab:→\ ,trail:·,extends:»,precedes:«
 
 syntax enable
+set t_Co=256
 set background=dark
 colorscheme solarized
 
