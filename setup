@@ -1,8 +1,11 @@
 #!/bin/bash
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/vim ~/.vim && mkdir ~/.vim/{bkp,tmp}
-ln -s ~/.dotfiles/vimrc ~/.vimrc
-git submodule update --init --recursive
 ln -s ~/.dotfiles/dircolors ~/.dircolors
+
+if [ -e ~/.bashrc ]; then
+    mv ~/.bashrc ~/.bashrc.bkp
+fi
+
 ln -s ~/.dotfiles/bashrc ~/.bashrc
 

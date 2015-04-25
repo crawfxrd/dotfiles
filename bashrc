@@ -37,14 +37,11 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
 fi
 
+alias cls='clear'
 alias la='ls -A'
 alias ll='la -Flh'
-
-# List user installed packages
 alias pkgs='comm -23 <(pacman -Qeq|sort) <(pacman -Qgq base base-devel|sort)'
 
-# Windows holdover
-alias cls='clear'
 
 # Playing with Rust
 export LD_LIBRARY_PATH=:/usr/local/lib
