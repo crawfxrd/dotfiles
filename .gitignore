@@ -1,4 +1,5 @@
-vim/viminfo
 vim/.netrwhist
+vim/bundle
+vim/viminfo
 *~
 *.sw[po]

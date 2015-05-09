@@ -29,21 +29,14 @@ export CXX=clang++
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export XENVIRONMENT="${HOME}/.Xresources"
-
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
-fi
 
 alias cls='clear'
-alias la='ls -A'
-alias ll='la -Flh'
+alias la='ls -AF'
+alias ll='la -lh'
 alias pkgs='comm -23 <(pacman -Qeq|sort) <(pacman -Qgq base base-devel|sort)'
-
+alias sudo='sudo '
 
 # Playing with Rust
 export LD_LIBRARY_PATH=:/usr/local/lib
-alias rustup='curl -s https://static.rust-lang.org/rustup.sh | sudo sh'
+alias rustup='curl -s https://static.rust-lang.org/rustup.sh | sh'
 
