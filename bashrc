@@ -31,6 +31,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 alias cls='clear'
+alias ls='ls --color=auto'
 alias la='ls -AF'
 alias ll='la -lh'
 alias pkgs='comm -23 <(pacman -Qeq|sort) <(pacman -Qgq base base-devel|sort)'

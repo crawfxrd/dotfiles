@@ -37,9 +37,10 @@ set smartindent autoindent
 set list
 set listchars=tab:→\ ,trail:·,extends:»,precedes:«
 
+set mouse=a
+
 nnoremap <space> za
 
 syntax enable
 set background=dark
-colorscheme solarized
 
