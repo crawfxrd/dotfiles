@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 
 ln -s ~/.dotfiles/vim ~/.vim
@@ -7,7 +8,7 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 wait
 vim +PluginInstall +qall
 
-if [ -e ~/.bashrc ]; then
+if [[ -e ~/.bashrc ]]; then
     mv ~/.bashrc ~/.bashrc.bkp
 fi
 

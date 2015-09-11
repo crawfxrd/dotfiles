@@ -30,14 +30,22 @@ export CXX=clang++
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+if [[ -x /usr/bin/dircolors ]]; then
+    [[ -r ~/.dircolors ]] && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
+
 alias cls='clear'
-alias ls='ls --color=auto'
-alias la='ls -AF'
+alias grep='grep --color=auto'
+alias ls='ls --color=auto --group-directories-first --file-type'
+alias la='ls -A'
 alias ll='la -lh'
 alias pkgs='comm -23 <(pacman -Qeq|sort) <(pacman -Qgq base base-devel|sort)'
 alias sudo='sudo '
 
+complete -cf sudo
+
+unset SSH_ASKPASS
+
 # Playing with Rust
 export LD_LIBRARY_PATH=:/usr/local/lib
 alias rustup='curl -s https://static.rust-lang.org/rustup.sh | sh'
-
