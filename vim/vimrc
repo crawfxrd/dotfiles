@@ -23,7 +23,10 @@ set history=50
 set backspace=indent,eol,start
 set whichwrap+=<,>,h,l,[,]
 set nowrap
-set colorcolumn=80
+set cursorline
+highlight CursorLine cterm=bold ctermbg=8
+set colorcolumn=100
+highlight ColorColumn ctermbg=8
 set scrolloff=3
 set backup
 set backupdir=~/.vim/bkp
@@ -32,7 +35,7 @@ set directory=~/.vim/tmp
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set smartindent
+set autoindent
 
 set list
 set listchars=tab:→\ ,trail:·,extends:»,precedes:«
