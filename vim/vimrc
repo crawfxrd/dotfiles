@@ -24,9 +24,9 @@ set backspace=indent,eol,start
 set whichwrap+=<,>,h,l,[,]
 set nowrap
 set cursorline
-highlight CursorLine cterm=bold ctermbg=8
+highlight CursorLine cterm=bold ctermbg=233
 set colorcolumn=100
-highlight ColorColumn ctermbg=8
+highlight ColorColumn ctermbg=233
 set scrolloff=3
 set backup
 set backupdir=~/.vim/bkp
