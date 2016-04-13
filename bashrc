@@ -45,7 +45,3 @@ alias sudo='sudo '
 complete -cf sudo
 
 unset SSH_ASKPASS
-
-# Playing with Rust
-export LD_LIBRARY_PATH=:/usr/local/lib
-alias rustup='curl -s https://static.rust-lang.org/rustup.sh | sh'
