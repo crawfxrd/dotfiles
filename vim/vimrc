@@ -1,16 +1,12 @@
 set nocompatible
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.local/share/vim/plugins')
+Plug 'rust-lang/rust.vim'
+call plug#end()
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'rust-lang/rust.vim'
+syntax enable
+set background=dark
 
-call vundle#end()
-filetype plugin indent on
-
-set viminfo+=n~/.vim/viminfo
 set title
 set hidden
 set ruler
@@ -29,8 +25,9 @@ set colorcolumn=100
 highlight ColorColumn ctermbg=233
 set scrolloff=3
 set backup
-set backupdir=~/.vim/bkp
-set directory=~/.vim/tmp
+set backupdir=~/.local/share/vim/backup
+set directory=~/.local/share/vim/swap
+set viminfo+=n~/.local/share/vim/viminfo
 
 set tabstop=4
 set shiftwidth=4
@@ -41,9 +38,4 @@ set list
 set listchars=tab:→\ ,trail:·,extends:»,precedes:«
 
 set mouse=a
-
 nnoremap <space> za
-
-syntax enable
-set background=dark
-

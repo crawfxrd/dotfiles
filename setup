@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 
-ln -s ~/.dotfiles/gitconfig ~/.gitconfig
-
-ln -s ~/.dotfiles/vim ~/.vim
-mkdir ~/.vim/{bkp,tmp,bundle}
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-wait
-vim +PluginInstall +qall
-
 if [[ -e ~/.bashrc ]]; then
     mv ~/.bashrc ~/.bashrc.bkp
 fi
 
 ln -s ~/.dotfiles/bashrc ~/.bashrc
+ln -s ~/.dotfiles/gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/vim ~/.vim
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+mkdir -p ~/.local/share/vim/{backup,plugins,swap}
