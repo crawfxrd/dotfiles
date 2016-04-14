@@ -7,7 +7,9 @@ set background=dark
 
 set backup
 
-if !has('nvim')
+if has('nvim')
+    set backupdir-=.
+else
     set backupdir=~/.local/share/vim/backup
     set directory=~/.local/share/vim/swap//
     set viminfo+=n~/.local/share/vim/viminfo
