@@ -1,33 +1,34 @@
-set nocompatible
-
-call plug#begin('~/.local/share/vim/plugins')
+call plug#begin('~/.local/share/nvim/plugins')
 Plug 'rust-lang/rust.vim'
 call plug#end()
 
 syntax enable
 set background=dark
 
+set backup
+
+if !has('nvim')
+    set backupdir=~/.local/share/vim/backup
+    set directory=~/.local/share/vim/swap//
+    set viminfo+=n~/.local/share/vim/viminfo
+endif
+
 set title
-set hidden
 set ruler
-set cmdheight=2
 set showcmd
 set encoding=utf-8
 set fileencoding=utf-8
-set lazyredraw
 set history=50
 set backspace=indent,eol,start
-set whichwrap+=<,>,h,l,[,]
+set whichwrap+=<,>,[,],h,l
 set nowrap
+set scrolloff=3
+set sidescroll=5
+
 set cursorline
 highlight CursorLine cterm=bold ctermbg=233
 set colorcolumn=100
 highlight ColorColumn ctermbg=233
-set scrolloff=3
-set backup
-set backupdir=~/.local/share/vim/backup
-set directory=~/.local/share/vim/swap
-set viminfo+=n~/.local/share/vim/viminfo
 
 set tabstop=4
 set shiftwidth=4
@@ -38,4 +39,12 @@ set list
 set listchars=tab:→\ ,trail:·,extends:»,precedes:«
 
 set mouse=a
-nnoremap <space> za
+
+nnoremap <Space> za
+set foldmethod=syntax
+set foldlevelstart=99
+
+if has('nvim')
+    set clipboard+=unnamedplus
+endif
+

@@ -41,6 +41,7 @@ alias la='ls -A'
 alias ll='la -lh'
 alias pkgs='comm -23 <(pacman -Qeq|sort) <(pacman -Qgq base base-devel|sort)'
 alias sudo='sudo '
+alias vim='nvim'
 
 complete -cf sudo
 
