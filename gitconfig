@@ -6,3 +6,4 @@
 	whitespace = trailing-space,space-before-tab
 [push]
 	default = simple
+	followTags = true

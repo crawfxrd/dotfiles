@@ -1,11 +1,16 @@
 call plug#begin('~/.local/share/nvim/plugins')
 Plug 'rust-lang/rust.vim'
+Plug 'Shougo/deoplete.nvim'
 call plug#end()
 
 syntax enable
 set background=dark
 
 set backup
+
+if has('nvim')
+    let g:deoplete#enable_at_startup = 1
+endif
 
 if has('nvim')
     set backupdir-=.

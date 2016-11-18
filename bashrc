@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+PS1='\[\e[1;34m\][\u@\h \w]\$\[\e[m\] '
 
 # Colored man pages
 man() {
@@ -42,6 +42,7 @@ alias ll='la -lh'
 alias pkgs='comm -23 <(pacman -Qeq|sort) <(pacman -Qgq base base-devel|sort)'
 alias sudo='sudo '
 alias vim='nvim'
+alias vi='nvim'
 
 complete -cf sudo
 

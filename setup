@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-if [[ -e ~/.bashrc ]]; then
-    mv ~/.bashrc ~/.bashrc.bkp
-fi
-
+[[ -e ~/.bashrc ]] && mv ~/.bashrc ~/.bashrc.bak
 ln -s ~/.dotfiles/bashrc ~/.bashrc
+
+[[ -e ~/.gitconfig ]] && mv ~/.gitconfig ~/.gitconfig.bak
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
+
 ln -s ~/.dotfiles/nvim ~/.config/nvim
 ln -s ~/.dotfiles/nvim ~/.vim
 ln -s ~/.dotfiles/nvim/init.vim ~/.vimrc
