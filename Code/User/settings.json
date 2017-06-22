@@ -1,0 +1,12 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.wordWrapColumn": 100,
+    "editor.quickSuggestionsDelay": 100,
+    "editor.mouseWheelZoom": true,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "C_Cpp.intelliSenseEngine": "Default"
+}

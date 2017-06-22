@@ -7,18 +7,6 @@
 
 PS1='\[\e[1;34m\][\u@\h \w]\$\[\e[m\] '
 
-# Colored man pages
-man() {
-    env LESS_TERMCAP_mb=$'\E[01;31m' \
-        LESS_TERMCAP_md=$'\E[01;38;5;74m' \
-        LESS_TERMCAP_me=$'\E[0m' \
-        LESS_TERMCAP_se=$'\E[0m' \
-        LESS_TERMCAP_so=$'\E[38;5;246m' \
-        LESS_TERMCAP_ue=$'\E[0m' \
-        LESS_TERMCAP_us=$'\E[04;38;5;146m' \
-        man "$@"
-}
-
 export HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 export HISTSIZE=100
@@ -28,22 +16,19 @@ export CC=clang
 export CXX=clang++
 
 export VISUAL=vim
-export EDITOR="$VISUAL"
+export EDITOR="${VISUAL}"
 
 if [[ -x /usr/bin/dircolors ]]; then
     [[ -r ~/.dircolors ]] && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 
 alias cls='clear'
+#alias pkgs='comm -23 <(pacman -Qeq|sort) <(pacman -Qgq base base-devel|sort)'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto --group-directories-first --file-type'
 alias la='ls -A'
 alias ll='la -lh'
-alias pkgs='comm -23 <(pacman -Qeq|sort) <(pacman -Qgq base base-devel|sort)'
-alias sudo='sudo '
 alias vim='nvim'
 alias vi='nvim'
 
 complete -cf sudo
-
-unset SSH_ASKPASS
