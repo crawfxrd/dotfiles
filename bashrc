@@ -9,10 +9,14 @@
 
 PS1='\[\e[1;34m\][\u@\h \w]\$\[\e[m\] '
 
+if [[ -r /usr/share/bash-completion/bash_completion ]]; then
+    source /usr/share/bash-completion/bash_completion
+fi
+
 export HISTCONTROL=ignoreboth:erasedups
-shopt -s histappend
 export HISTSIZE=100
 export HISTFILESIZE=1000
+shopt -s histappend
 
 export CC=clang
 export CXX=clang++

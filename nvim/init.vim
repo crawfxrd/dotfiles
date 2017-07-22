@@ -34,6 +34,7 @@ set whichwrap+=<,>,[,],h,l
 set nowrap
 set scrolloff=3
 set sidescroll=5
+set modeline
 
 set cursorline
 highlight CursorLine cterm=bold ctermbg=234
