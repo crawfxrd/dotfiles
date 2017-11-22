@@ -4,6 +4,9 @@
 [core]
 	editor = vim
 	whitespace = trailing-space,space-before-tab
+	autocrlf = input
 [push]
 	default = simple
 	followTags = true
+[pull]
+	rebase = preserve

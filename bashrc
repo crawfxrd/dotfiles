@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+[[ -r /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
+
 PS1='\[\e[1;34m\][\u@\h \w]\$\[\e[m\] '
 
 export HISTCONTROL=ignoreboth:erasedups
@@ -24,7 +26,7 @@ fi
 
 alias cls='clear'
 #alias pkgs='comm -23 <(pacman -Qeq|sort) <(pacman -Qgq base base-devel|sort)'
-alias grep='grep --color=auto'
+alias grep='grep --color=auto -I'
 alias ls='ls --color=auto --group-directories-first --file-type'
 alias la='ls -A'
 alias ll='la -lh'
@@ -32,3 +34,4 @@ alias vim='nvim'
 alias vi='nvim'
 
 complete -cf sudo
+stty -ixon

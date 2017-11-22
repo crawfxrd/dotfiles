@@ -2,6 +2,7 @@ call plug#begin('~/.local/share/nvim/plugins')
 Plug 'rust-lang/rust.vim'
 Plug 'Shougo/deoplete.nvim'
 Plug 'racer-rust/vim-racer'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 syntax enable
@@ -23,7 +24,6 @@ else
     set viminfo+=n~/.local/share/vim/viminfo
 endif
 
-set title
 set ruler
 set showcmd
 set encoding=utf-8
