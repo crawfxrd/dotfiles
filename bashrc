@@ -29,13 +29,16 @@ if [[ -x /usr/bin/dircolors ]]; then
 fi
 
 alias cls='clear'
-#alias pkgs='comm -23 <(pacman -Qeq|sort) <(pacman -Qgq base base-devel|sort)'
 alias grep='grep --color=auto -I'
 alias ls='ls --color=auto --group-directories-first --file-type'
 alias la='ls -A'
 alias ll='la -lh'
 alias vim='nvim'
 alias vi='nvim'
+alias cf='clang-format -i -style=file'
+alias gs='git status'
 
 complete -cf sudo
 stty -ixon
+
+export DOTNET_CLI_TELEMETRY_OPTOUT=1

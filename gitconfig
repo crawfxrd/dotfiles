@@ -5,6 +5,7 @@
 	editor = vim
 	whitespace = trailing-space,space-before-tab
 	autocrlf = input
+	pager = less -S -+X
 [push]
 	default = simple
 	followTags = true

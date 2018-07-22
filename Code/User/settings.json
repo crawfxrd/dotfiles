@@ -9,5 +9,7 @@
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "C_Cpp.intelliSenseEngine": "Default",
-    "python.pythonPath": "python3"
+    "python.pythonPath": "python3",
+    "window.restoreWindows": "none",
+    "explorer.openEditors.visible": 0
 }

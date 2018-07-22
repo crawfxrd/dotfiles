@@ -1,3 +1,7 @@
+if !has('nvim')
+    set nocompatible
+endif
+
 call plug#begin('~/.local/share/nvim/plugins')
 Plug 'rust-lang/rust.vim'
 Plug 'Shougo/deoplete.nvim'
@@ -11,7 +15,6 @@ set background=dark
 if has('nvim')
     let g:deoplete#enable_at_startup = 1
     let g:racer_cmd = "~/.cargo/bin/racer"
-    let g:racer_experimental_completer = 1
 endif
 
 set backup
@@ -25,7 +28,6 @@ else
 endif
 
 set ruler
-set showcmd
 set encoding=utf-8
 set fileencoding=utf-8
 set history=50
@@ -41,10 +43,26 @@ highlight CursorLine cterm=bold ctermbg=234
 set colorcolumn=100
 highlight ColorColumn ctermbg=234
 
+highlight ExtraWhitespace ctermbg=red
+call matchadd('ExtraWhitespace', '\s\+$\| \+\ze\t', 10)
+autocmd BufWinEnter * if !exists('w:matchId') | let w:matchId = matchadd('ExtraWhitespace', '\s\+$\| \+\ze\t', 10) | endif
+autocmd BufWinLeave * call matchdelete(w:matchId)
+
+highlight AlignmentTabs ctermbg=red
+call matchadd('AlignmentTabs', '\(\S.*\)\@<=\t\+', 10)
+autocmd BufWinEnter * if !exists('w:matchId2') | let w:matchId2 = matchadd('AlignmentTabs', '\(\S.*\)\@<=\t\+', 10) | endif
+autocmd BufWinLeave * call matchdelete(w:matchId2)
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set copyindent
+set preserveindent
 set autoindent
+set smartindent
+
+set winheight=8
+set winminheight=8
 
 set list
 set listchars=tab:→\ ,trail:·,extends:»,precedes:«
@@ -52,6 +70,8 @@ set listchars=tab:→\ ,trail:·,extends:»,precedes:«
 set mouse=a
 
 nnoremap <Space> za
+nmap , :
+
 set foldmethod=syntax
 set foldlevelstart=99
 
@@ -75,3 +95,8 @@ execute "digraphs ts " . 0x209C
 execute "digraphs us " . 0x1D64
 execute "digraphs vs " . 0x1D65
 execute "digraphs xs " . 0x2093
+
+autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \    exe "normal g'\"" |
+    \ endif
