@@ -11,5 +11,11 @@
     "C_Cpp.intelliSenseEngine": "Default",
     "python.pythonPath": "python3",
     "window.restoreWindows": "none",
-    "explorer.openEditors.visible": 0
+    "explorer.openEditors.visible": 0,
+    "explorer.confirmDelete": false,
+    "editor.autoClosingBrackets": "never",
+    "cmake.configureOnOpen": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.statusBar.feedback.visible": false,
+    "editor.detectIndentation": false
 }
