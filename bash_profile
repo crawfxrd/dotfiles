@@ -4,6 +4,7 @@ if [[ -r ~/.bashrc ]]; then
     . ~/.bashrc
 fi
 
-PATH="${HOME}/.cargo/bin:${PATH}"
-PATH="${HOME}/.local/bin:${PATH}"
+PATH=$PATH:/usr/share/bcc/tools
+PATH=$PATH:$HOME/.cargo/bin
+PATH=$PATH:$HOME/.local/bin
 export PATH
