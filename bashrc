@@ -31,12 +31,11 @@ fi
 alias cls='clear'
 alias grep='grep --color=auto -I'
 alias ls='ls --color=auto --group-directories-first --file-type'
-alias la='ls -A'
-alias ll='la -lh'
 alias vim='nvim'
 alias vi='nvim'
 alias cf='clang-format -i -style=file'
 alias gs='git status'
+alias gpg='gpg2'
 
 complete -cf sudo
 stty -ixon

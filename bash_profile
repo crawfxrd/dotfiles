@@ -6,5 +6,5 @@ fi
 
 PATH=$PATH:/usr/share/bcc/tools
 PATH=$PATH:$HOME/.cargo/bin
-PATH=$PATH:$HOME/.local/bin
+PATH=$HOME/.local/bin:$PATH
 export PATH

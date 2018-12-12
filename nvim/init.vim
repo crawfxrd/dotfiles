@@ -40,7 +40,7 @@ set modeline
 
 set cursorline
 highlight CursorLine cterm=bold ctermbg=234
-set colorcolumn=100
+set colorcolumn=80
 highlight ColorColumn ctermbg=234
 
 highlight ExtraWhitespace ctermbg=red
