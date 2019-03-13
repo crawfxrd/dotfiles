@@ -7,7 +7,7 @@
 
 [[ -r /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
 
-PS1='\[\e[1;34m\][\u@\h \w]\$\[\e[m\] '
+PS1='\[\e[1;36m\][\h \w]\$\[\e[m\] '
 
 if [[ -r /usr/share/bash-completion/bash_completion ]]; then
     source /usr/share/bash-completion/bash_completion

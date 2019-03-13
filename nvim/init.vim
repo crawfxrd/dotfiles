@@ -81,6 +81,9 @@ nnoremap <Space> za
 nnoremap j gj
 nnoremap k gk
 
+map <C-K> :pyf ~/.local/bin/clang-format.py<CR>
+imap <C-K> <C-O>:pyf ~/.local/bin/clang-format.py<CR>
+
 set foldmethod=syntax
 set foldlevelstart=99
 
