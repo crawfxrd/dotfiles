@@ -2,7 +2,7 @@
 	name = Tim Crawford
 	email = crawfxrd@gmail.com
 [core]
-	editor = vim
+	editor = nvim
 	whitespace = trailing-space,space-before-tab
 	autocrlf = input
 	pager = less -S -+X
@@ -10,10 +10,15 @@
 	default = simple
 	followTags = true
 [pull]
-	rebase = preserve
+	rebase = merges
 [gpg]
 	program = gpg2
 [gpgv]
 	program = gpgv2
 [tag]
 	forceSignAnnotated = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

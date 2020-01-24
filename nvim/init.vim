@@ -15,6 +15,7 @@ set background=dark
 if has('nvim')
     let g:deoplete#enable_at_startup = 1
     let g:racer_cmd = "~/.cargo/bin/racer"
+    let g:racer_experimental_completer = 1
 endif
 
 set backup
@@ -59,13 +60,11 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set copyindent
-"set preserveindent
 set autoindent
 set smartindent
 
 set ignorecase
 set smartcase
-set gdefault
 
 set winheight=8
 set winminheight=8
@@ -80,9 +79,6 @@ nnoremap <Space> za
 
 nnoremap j gj
 nnoremap k gk
-
-map <C-K> :pyf ~/.local/bin/clang-format.py<CR>
-imap <C-K> <C-O>:pyf ~/.local/bin/clang-format.py<CR>
 
 set foldmethod=syntax
 set foldlevelstart=99

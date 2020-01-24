@@ -18,8 +18,8 @@ export HISTSIZE=100
 export HISTFILESIZE=1000
 shopt -s histappend
 
-export CC=clang
-export CXX=clang++
+#export CC=clang
+#export CXX=clang++
 
 export VISUAL=vim
 export EDITOR="${VISUAL}"
@@ -41,3 +41,6 @@ complete -cf sudo
 stty -ixon
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=$DEVKITPRO/devkitARM
