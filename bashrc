@@ -9,6 +9,10 @@
 
 PS1='\[\e[1;36m\][\h \w]\$\[\e[m\] '
 
+if [ -r /etc/profile.d/vte.sh ]; then
+    source /etc/profile.d/vte.sh
+fi
+
 if [[ -r /usr/share/bash-completion/bash_completion ]]; then
     source /usr/share/bash-completion/bash_completion
 fi
@@ -21,21 +25,20 @@ shopt -s histappend
 #export CC=clang
 #export CXX=clang++
 
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR="${VISUAL}"
 
 if [[ -x /usr/bin/dircolors ]]; then
     [[ -r ~/.dircolors ]] && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 
+alias cf='clang-format -i -style=file'
 alias cls='clear'
 alias grep='grep --color=auto -I'
-alias ls='ls --color=auto --group-directories-first --file-type'
-alias vim='nvim'
-alias vi='nvim'
-alias cf='clang-format -i -style=file'
 alias gs='git status'
-alias gpg='gpg2'
+alias ls='ls --color=auto --group-directories-first --file-type'
+alias vi='nvim'
+alias vim='nvim'
 
 complete -cf sudo
 stty -ixon

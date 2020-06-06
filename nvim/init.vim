@@ -14,8 +14,8 @@ set background=dark
 
 if has('nvim')
     let g:deoplete#enable_at_startup = 1
-    let g:racer_cmd = "~/.cargo/bin/racer"
     let g:racer_experimental_completer = 1
+    "let g:racer_disable_errors = 1
 endif
 
 set backup
@@ -26,6 +26,7 @@ else
     set backupdir=~/.local/share/vim/backup
     set directory=~/.local/share/vim/swap//
     set viminfo+=n~/.local/share/vim/viminfo
+    set undodir=~/.local/share/vim/undo
 endif
 
 set ruler
@@ -41,9 +42,9 @@ set nomodeline
 set undofile
 
 set cursorline
-highlight CursorLine cterm=bold ctermbg=234
+highlight CursorLine cterm=bold ctermbg=233
 set colorcolumn=80
-highlight ColorColumn ctermbg=234
+highlight ColorColumn ctermbg=233
 
 highlight ExtraWhitespace ctermbg=red
 call matchadd('ExtraWhitespace', '\s\+$\| \+\ze\t', 10)
@@ -74,7 +75,7 @@ set listchars=tab:→\ ,trail:·,extends:»,precedes:«
 
 set mouse=a
 
-nmap , :
+map , :
 nnoremap <Space> za
 
 nnoremap j gj
