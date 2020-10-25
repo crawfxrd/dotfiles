@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+which nvim &> /dev/null || sudo dnf install -y neovim python3-neovim
+
 ln -sf ~/.dotfiles/bashrc ~/.bashrc
 ln -sf ~/.dotfiles/bash_profile ~/.bash_profile
 ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
