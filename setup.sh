@@ -2,16 +2,16 @@
 
 which nvim &> /dev/null || sudo dnf install -y neovim python3-neovim
 
-ln -sf ~/.dotfiles/bashrc ~/.bashrc
-ln -sf ~/.dotfiles/bash_profile ~/.bash_profile
-ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
+ln -fsrv bashrc ~/.bashrc
+ln -fsrv bash_profile ~/.bash_profile
+ln -fsrv gitconfig ~/.gitconfig
 
 [[ ! -e ~/.config/Code/User ]] && mkdir -p ~/.config/Code/User
-ln -sf ~/.dotfiles/Code/User/settings.json ~/.config/Code/User/settings.json
+ln -fsrv Code/User/settings.json ~/.config/Code/User/settings.json
 
-ln -sf ~/.dotfiles/nvim ~/.config/nvim
-ln -sf ~/.dotfiles/nvim ~/.vim
-ln -sf ~/.dotfiles/nvim/init.vim ~/.vimrc
+ln -fsrv nvim ~/.config/nvim
+ln -fsrv nvim ~/.vim
+ln -fsrv nvim/init.vim ~/.vimrc
 
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
