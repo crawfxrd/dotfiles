@@ -13,6 +13,9 @@ ln -fsrv nvim ~/.config/nvim
 ln -fsrv nvim ~/.vim
 ln -fsrv nvim/init.vim ~/.vimrc
 
+[[ ! -e ~/.config/pulse ]] && mkdir -p ~/.config/pulse
+ln -fsrv pulse/daemon.conf ~/.config/pulse/daemon.conf
+
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
