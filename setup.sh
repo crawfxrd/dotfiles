@@ -4,6 +4,7 @@ which nvim &> /dev/null || sudo dnf install -y neovim python3-neovim
 
 ln -fsrv bashrc ~/.bashrc
 ln -fsrv bash_profile ~/.bash_profile
+ln -fsrv gdbinit ~/.gdbinit
 ln -fsrv gitconfig ~/.gitconfig
 
 [[ ! -e ~/.config/Code/User ]] && mkdir -p ~/.config/Code/User
