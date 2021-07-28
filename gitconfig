@@ -8,7 +8,7 @@
 	pager = less -S -+X
 [push]
 	default = simple
-	followTags = true
+	#followTags = true
 [pull]
 	rebase = merges
 [gpg]
@@ -26,3 +26,7 @@
 	renamelimit = 8192
 [advice]
 	addIgnoredFile = false
+[init]
+	defaultBranch = main
+[alias]
+	co = checkout

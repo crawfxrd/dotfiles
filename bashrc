@@ -34,9 +34,12 @@ fi
 
 alias cf='clang-format -i -style=file'
 alias cls='clear'
+alias diff='diff -u'
+alias ghidra="/opt/ghidra/ghidra"
 alias grep='grep --color=auto -I'
 alias gs='git status'
 alias ls='ls --color=auto --group-directories-first --file-type'
+alias sudo='sudo '
 alias vi='nvim'
 alias vim='nvim'
 
@@ -47,3 +50,6 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=$DEVKITPRO/devkitARM
+
+export DEBFULLNAME="Tim Crawford"
+export DEBEMAIL="tcrawford@system76.com"
