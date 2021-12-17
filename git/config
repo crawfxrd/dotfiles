@@ -6,6 +6,7 @@
 	whitespace = trailing-space,space-before-tab
 	autocrlf = input
 	pager = less -S -+X
+	abbrev = 12
 [push]
 	default = simple
 	#followTags = true
