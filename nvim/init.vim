@@ -50,7 +50,7 @@ set completeopt=menuone,noinsert,noselect
 
 set cursorline
 highlight CursorLine cterm=bold ctermbg=233
-set colorcolumn=96
+set colorcolumn=80
 highlight ColorColumn ctermbg=233
 set signcolumn=yes
 highlight SignColumn ctermbg=233
@@ -60,10 +60,10 @@ call matchadd('ExtraWhitespace', '\s\+$\| \+\ze\t', 10)
 autocmd BufWinEnter * if !exists('w:matchId') | let w:matchId = matchadd('ExtraWhitespace', '\s\+$\| \+\ze\t', 10) | endif
 autocmd BufWinLeave * call matchdelete(w:matchId)
 
-highlight AlignmentTabs ctermbg=red
-call matchadd('AlignmentTabs', '\(\S.*\)\@<=\t\+', 10)
-autocmd BufWinEnter * if !exists('w:matchId2') | let w:matchId2 = matchadd('AlignmentTabs', '\(\S.*\)\@<=\t\+', 10) | endif
-autocmd BufWinLeave * call matchdelete(w:matchId2)
+"highlight AlignmentTabs ctermbg=red
+"call matchadd('AlignmentTabs', '\(\S.*\)\@<=\t\+', 10)
+"autocmd BufWinEnter * if !exists('w:matchId2') | let w:matchId2 = matchadd('AlignmentTabs', '\(\S.*\)\@<=\t\+', 10) | endif
+"autocmd BufWinLeave * call matchdelete(w:matchId2)
 
 set tabstop=4
 set shiftwidth=4
