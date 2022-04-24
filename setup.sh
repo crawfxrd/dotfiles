@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: NONE
 
 which nvim &> /dev/null || sudo dnf install -y neovim python3-neovim
 
